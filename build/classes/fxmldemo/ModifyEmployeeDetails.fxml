@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmldemo.ModifyEmployeeDetailsController">
+   <children>
+      <TextField fx:id="upEmpName" layoutX="14.0" layoutY="137.0" promptText="Employee Name" />
+      <TextField fx:id="upEmpAge" layoutX="174.0" layoutY="137.0" prefHeight="25.0" prefWidth="80.0" promptText="Age" />
+      <TextField fx:id="upEmpDesignation" layoutX="265.0" layoutY="137.0" promptText="Designation" />
+      <TextField fx:id="upEmpMail" layoutX="422.0" layoutY="137.0" promptText="E-Mail" />
+      <TextField fx:id="upEmpContact" layoutX="582.0" layoutY="137.0" promptText="Contact No." />
+      <Button fx:id="updateEmpdetailsButton" layoutX="266.0" layoutY="199.0" mnemonicParsing="false" onAction="#updatetEmpDetailsButtonAction" text="Update Employee Details" />
+      <Button fx:id="deleteEmpdetailsButton" layoutX="268.0" layoutY="304.0" mnemonicParsing="false" onAction="#deleteEmpdetailsButtonAction" text="Delete Employee Details" />
+      <Line endX="100.0" layoutX="340.0" layoutY="270.0" startX="-100.0" />
+      <Label fx:id="showempid" layoutX="43.0" layoutY="40.0" prefHeight="40.0" prefWidth="92.0" />
+   </children>
+</AnchorPane>
