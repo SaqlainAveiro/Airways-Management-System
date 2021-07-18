@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmldemo.CheckFlightPassengersController">
+   <children>
+      <ScrollPane fx:id="passengersScrollPane" layoutX="11.0" layoutY="125.0" prefHeight="327.0" prefWidth="643.0">
+         <content>
+            <VBox fx:id="passengersVBox" prefHeight="325.0" prefWidth="640.0" />
+         </content>
+      </ScrollPane>
+      <JFXComboBox fx:id="checkflightpassengersComboBox" labelFloat="true" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="178.0" promptText="Select Flight ID" />
+      <JFXButton fx:id="checkflightpassengersButton" buttonType="RAISED" layoutX="243.0" layoutY="35.0" onAction="#checkflightpassengersButtonAction" style="-fx-background-color: #2D00C1;" text="Check Flight Passengers" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

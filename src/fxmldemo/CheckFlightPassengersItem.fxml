@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="passengerviewAnchorPane" prefHeight="71.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmldemo.CheckFlightPassengersItemController">
+   <children>
+      <HBox fx:id="FlightOfficialEmpItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="634.0" style="-fx-border-color: #2D00C1;">
+         <children>
+            <ImageView fx:id="passengerimg" fitHeight="60.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@4.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userid" alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="124.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Corbel Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Corbel Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="usergender" alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="87.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Corbel Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="usercontact" alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="173.0">
+               <font>
+                  <Font name="Corbel Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

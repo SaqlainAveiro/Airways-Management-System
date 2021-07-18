@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="776.0" prefWidth="1237.0" stylesheets="@tableview.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmldemo.UserDashboardController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="220.0" style="-fx-background-color: #05071E;" stylesheets="@vbox.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #05071E;">
+               <children>
+                  <Label fx:id="userDashboardUsername" layoutX="31.0" layoutY="64.0" prefHeight="30.0" prefWidth="160.0" text="[User Name]" textFill="#eed7d7">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userDashboardMembership" layoutX="36.0" layoutY="109.0" prefHeight="30.0" prefWidth="167.0" text="[Membership]" textFill="#eed7d7" />
+                  <Label fx:id="userDashboardPoints" layoutX="36.0" layoutY="156.0" prefHeight="30.0" prefWidth="151.0" text="[Points]" textFill="#eed7d7" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Button fx:id="BookTicketButton" mnemonicParsing="false" onAction="#useractionbutton" prefHeight="50.0" prefWidth="224.0" text="Book Tickets" textFill="#ebebeb">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="MyFlightBtn" mnemonicParsing="false" onAction="#useractionbutton" prefHeight="50.0" prefWidth="224.0" text="My Flights" textFill="#ebebeb">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="JourneyButton" mnemonicParsing="false" onAction="#useractionbutton" prefHeight="50.0" prefWidth="240.0" text="Journey" textFill="#ebebeb">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="CustomerButton" mnemonicParsing="false" onAction="#useractionbutton" prefHeight="50.0" prefWidth="235.0" text="Customer Support" textFill="#ebebeb">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="LogoutButton" mnemonicParsing="false" onAction="#useractionbutton" prefHeight="50.0" prefWidth="235.0" text="Logout" textFill="#ebebeb">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <AnchorPane prefHeight="36.0" prefWidth="1237.0" style="-fx-background-color: #05071E;" BorderPane.alignment="CENTER">
+         <children>
+            
+            <Label layoutX="250.0" layoutY="2.0" prefHeight="50.0" prefWidth="252.0" text="USER DASHBOARD" textFill="#3384cc">
+               <font>
+                  <Font name="Serif Regular" size="22.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="34.0" prefWidth="700.0" style="-fx-background-color: #05071E;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="215.0" layoutY="-9.0" prefHeight="41.0" prefWidth="270.0" text="All Right Reserved by Gabtoli Airways" textAlignment="JUSTIFY" textFill="#3384cc">
+               <font>
+                  <Font name="Serif Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="CusotmerSupportAnchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8edeb;">
+               <children>
+                  <Label fx:id="CustomerSupportLabel" layoutX="382.0" layoutY="14.0" prefHeight="56.0" prefWidth="253.0" text="CUSTOMER SUPPORT" textAlignment="CENTER" textFill="#ab59ab">
+                     <font>
+                        <Font name="Eras Medium ITC" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="UserAdminConvo" layoutX="129.0" layoutY="106.0" prefHeight="327.0" prefWidth="763.0">
+                     <font>
+                        <Font name="Corbel Bold Italic" size="17.0" />
+                     </font>
+                  </TextArea>
+                  <TextField fx:id="UserMsg" layoutX="312.0" layoutY="517.0" prefHeight="44.0" prefWidth="323.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="UserSendButton" layoutX="721.0" layoutY="518.0" mnemonicParsing="false" onAction="#UserSendButtonAction" prefHeight="43.0" prefWidth="84.0" style="-fx-background-color: #6d597a;" text="SEND" textFill="WHITE">
+                     <font>
+                        <Font name="Eras Demi ITC" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="387.0" layoutY="579.0" opacity="0.71" prefHeight="17.0" prefWidth="174.0" text="For any kind of query type here" textFill="#ab59ab">
+                     <font>
+                        <Font name="Eras Medium ITC" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="finalBook" fx:id="finalBookingAnchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffcdb2;">
+               <children>
+                  <JFXButton fx:id="confirmBookingBtn21" layoutX="490.0" layoutY="589.0" onAction="#confirmBookingBtnAction" prefHeight="52.0" prefWidth="171.0" style="-fx-background-color: #5f0f40;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="294.0" layoutY="589.0" onAction="#finalBookingBackAction" prefHeight="52.0" prefWidth="174.0" style="-fx-background-color: #495057;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox id="hbox2" prefHeight="64.0" prefWidth="1016.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="68.0" prefWidth="1016.0" text="Confirm Your Booking" textFill="#f8edeb">
+                           <font>
+                              <Font name="Arial Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="hbox3" layoutX="59.0" layoutY="119.0" prefHeight="456.0" prefWidth="910.0">
+                     <children>
+                        <GridPane fx:id="bookingInfoGrid" prefHeight="479.0" prefWidth="542.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="175.0" text="Flight ID :" textFill="#ede0d4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingFlightIdLabel" prefHeight="36.0" prefWidth="265.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="143.0" text="Departure Date :" textFill="#ede0d4" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="144.0" text="Departure Time :" textFill="#ede0d4" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingDepartureTimeLabel" prefHeight="36.0" prefWidth="265.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="175.0" text="No. Of  Seats :" textFill="#ede0d4" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="noOfSeatsShow" prefHeight="36.0" prefWidth="264.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Serif Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingFareCalculationLabel" prefHeight="36.0" prefWidth="265.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="Serif Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingTotalLabel" prefHeight="38.0" prefWidth="347.0" textFill="#ffc694" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                 <font>
+                                    <Font name="Serif Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingName" prefHeight="36.0" prefWidth="266.0" textFill="#ede0d4" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Serif Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="141.0" text="Departure From :" textFill="#ede0d4" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="178.0" text="Departure To:" textFill="#ede0d4" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="175.0" text="Aircraft :" textFill="#ede0d4" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Serif Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="99.0" text="Subtotal :" textFill="#ede0d4" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="Serif Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="224.0" text="Membership Discount :" textFill="#ede0d4" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font name="Serif Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="178.0" text="Selected Seats" textFill="#ede0d4" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Serif Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="selectedSeats" prefHeight="40.0" prefWidth="266.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Serif Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingDepartureFrom" prefHeight="36.0" prefWidth="260.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingDepartureTo" prefHeight="39.0" prefWidth="219.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingDateLabel" prefHeight="36.0" prefWidth="268.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="confirmBookingDiscountLabel" prefHeight="36.0" prefWidth="348.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font name="Serif Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="175.0" text="Name :" textFill="#ede0d4">
+                                 <font>
+                                    <Font name="Serif Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="185.0" text="Total :" textFill="#ffc694" GridPane.rowIndex="11">
+                                 <font>
+                                    <Font name="Serif Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AricraftLabel" prefHeight="36.0" prefWidth="352.0" textFill="#ede0d4" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Serif Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="242.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="300.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="flightInfoAnchorpane" prefHeight="682.0" prefWidth="982.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TableView fx:id="showFlightTable" layoutX="-1.0" layoutY="77.0" prefHeight="602.0" prefWidth="1019.0">
+                    <columns>
+                      <TableColumn fx:id="flightTableFlightId" prefWidth="91.0" text="Flight ID" />
+                      <TableColumn fx:id="flightTableSource" prefWidth="106.0" text="Source" />
+                        <TableColumn fx:id="flightTableDestination" prefWidth="153.0" text="Destination" />
+                        <TableColumn fx:id="flightTableDDAT" prefWidth="245.0" text="Departure Time" />
+                        <TableColumn fx:id="flightTableRDAT" prefWidth="157.0" text="Avilable Seats" />
+                        <TableColumn fx:id="flightTableClsType" prefWidth="147.0" text="ClassType" />
+                        <TableColumn fx:id="flightTableFare" prefWidth="75.0" text="Fare" />
+                    </columns>
+                  </TableView>
+                  <HBox id="hbox7" prefHeight="63.0" prefWidth="1016.0">
+                     <children>
+                        <Label prefHeight="51.0" prefWidth="280.0" text="Available Flights" textFill="#f8edeb">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ConfirmBookingAnchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8edeb;">
+               <children>
+                  <JFXButton fx:id="confirmBookingBtn2" layoutX="229.0" layoutY="512.0" onAction="#confirmBookingContinueAction" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #5f0f40;" text="Continue" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="confirmBookingBackBtn2" layoutX="18.0" layoutY="512.0" onAction="#confirmBookingBackBtnAction" prefHeight="52.0" prefWidth="205.0" style="-fx-background-color: #495057;" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="A1Id" layoutX="501.0" layoutY="133.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A1" />
+                  <JFXButton fx:id="A2Id" layoutX="576.0" layoutY="133.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A3Id" layoutX="690.0" layoutY="133.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A3" />
+                  <JFXButton fx:id="A4Id" layoutX="767.0" layoutY="133.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A4" />
+                  <JFXButton fx:id="A5Id" layoutX="849.0" layoutY="133.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A5" />
+                  <JFXButton fx:id="A2Id312" layoutX="501.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id212" layoutX="501.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id112" layoutX="501.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id42" layoutX="501.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="B1Id" layoutX="501.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="B1" />
+                  <JFXButton fx:id="A2Id322" layoutX="576.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id222" layoutX="576.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id122" layoutX="576.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id52" layoutX="576.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="B2Id" layoutX="576.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="B2" />
+                  <JFXButton fx:id="A2Id332" layoutX="690.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id232" layoutX="690.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id132" layoutX="690.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id62" layoutX="690.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="B3Id" layoutX="690.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="B3" />
+                  <JFXButton fx:id="A2Id342" layoutX="767.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id242" layoutX="767.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id142" layoutX="767.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id72" layoutX="767.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="B4Id" layoutX="767.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="B4" />
+                  <JFXButton fx:id="A2Id352" layoutX="849.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id252" layoutX="849.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id152" layoutX="849.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="A2Id82" layoutX="849.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="A2" />
+                  <JFXButton fx:id="B5Id" layoutX="849.0" layoutY="201.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="B5" />
+                  <JFXButton fx:id="C1Id" layoutX="501.0" layoutY="264.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="C1" />
+                  <JFXButton fx:id="D1Id" layoutX="501.0" layoutY="327.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="D1" />
+                  <JFXButton fx:id="E1Id" layoutX="501.0" layoutY="392.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="E1" />
+                  <JFXButton fx:id="F1Id" layoutX="502.0" layoutY="458.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="F1" />
+                  <JFXButton fx:id="G1Id" layoutX="501.0" layoutY="525.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="G1" />
+                  <JFXButton fx:id="H1Id" layoutX="502.0" layoutY="589.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="H1" />
+                  <JFXButton fx:id="C2Id" layoutX="576.0" layoutY="264.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="C2" />
+                  <JFXButton fx:id="D2Id" layoutX="576.0" layoutY="327.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="D2" />
+                  <JFXButton fx:id="E2Id" layoutX="576.0" layoutY="392.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="E2" />
+                  <JFXButton fx:id="F2Id" layoutX="576.0" layoutY="458.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="F2" />
+                  <JFXButton fx:id="G2Id" layoutX="576.0" layoutY="525.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="G2" />
+                  <JFXButton fx:id="H2Id" layoutX="576.0" layoutY="589.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="H2" />
+                  <JFXButton fx:id="C3Id" layoutX="690.0" layoutY="264.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="C3" />
+                  <JFXButton fx:id="D3Id" layoutX="690.0" layoutY="327.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="D3" />
+                  <JFXButton fx:id="E3Id" layoutX="690.0" layoutY="392.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="E3" />
+                  <JFXButton fx:id="F3Id" layoutX="690.0" layoutY="458.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="F3" />
+                  <JFXButton fx:id="G3Id" layoutX="690.0" layoutY="525.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="G3" />
+                  <JFXButton fx:id="H3Id" layoutX="690.0" layoutY="589.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="H3" />
+                  <JFXButton fx:id="C4Id" layoutX="767.0" layoutY="264.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="C4" />
+                  <JFXButton fx:id="D4Id" layoutX="767.0" layoutY="327.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="D4" />
+                  <JFXButton fx:id="E4Id" layoutX="767.0" layoutY="392.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="E4" />
+                  <JFXButton fx:id="F4Id" layoutX="767.0" layoutY="458.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="F4" />
+                  <JFXButton fx:id="G4Id" layoutX="767.0" layoutY="525.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="G4" />
+                  <JFXButton fx:id="H4Id" layoutX="767.0" layoutY="589.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="H4" />
+                  <JFXButton fx:id="C5Id" layoutX="849.0" layoutY="264.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="C5" />
+                  <JFXButton fx:id="D5Id" layoutX="849.0" layoutY="327.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="D5" />
+                  <JFXButton fx:id="E5Id" layoutX="849.0" layoutY="392.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="E5" />
+                  <JFXButton fx:id="F5Id" layoutX="849.0" layoutY="458.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="F5" />
+                  <JFXButton fx:id="G5Id" layoutX="849.0" layoutY="525.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="G5" />
+                  <JFXButton fx:id="H5Id" layoutX="849.0" layoutY="589.0" onAction="#seatButtonAction" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text="H5" />
+                  <JFXButton layoutX="501.0" layoutY="8.0" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: lightGreen;" text=" " />
+                  <Label layoutX="560.0" layoutY="13.0" prefHeight="28.0" prefWidth="86.0" text="Available">
+                     <font>
+                        <Font name="Lucida Fax Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="A1Id22" layoutX="695.0" layoutY="9.0" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: #b1a7a6;" text=" " />
+                  <Label layoutX="762.0" layoutY="15.0" prefHeight="28.0" prefWidth="86.0" text="Booked">
+                     <font>
+                        <Font name="Lucida Fax Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <HBox id="hbox1" fx:id="hbox1" layoutX="14.0" layoutY="111.0" prefHeight="60.0" prefWidth="191.0">
+                     <children>
+                        <Label fx:id="confirmBookingDepartureFrom1" alignment="CENTER" prefHeight="53.0" prefWidth="174.0" textFill="#f0efeb">
+                           <font>
+                              <Font name="Serif Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="hbox0" layoutX="4.0" layoutY="7.0" prefHeight="69.0" prefWidth="461.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="71.0" prefWidth="358.0" text="Booking Details" textFill="#edffd8">
+                           <font>
+                              <Font name="Serif Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="hbox1" fx:id="hbox11" layoutX="256.0" layoutY="111.0" prefHeight="61.0" prefWidth="190.0">
+                     <children>
+                        <Label fx:id="confirmBookingDepartureTo1" alignment="CENTER" prefHeight="61.0" prefWidth="190.0" textFill="#f0efeb">
+                           <font>
+                              <Font name="Serif Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="200.0" layoutY="120.0" prefHeight="44.0" prefWidth="58.0" text="To" textFill="#283618">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox id="hbox1" fx:id="hbox111" layoutX="13.0" layoutY="225.0" prefHeight="60.0" prefWidth="202.0">
+                     <children>
+                        <Label fx:id="confirmBookingDateLabel1" alignment="CENTER" prefHeight="56.0" prefWidth="190.0" textFill="#f0efeb">
+                           <font>
+                              <Font name="Serif Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="hbox1" fx:id="hbox112" layoutX="241.0" layoutY="225.0" prefHeight="57.0" prefWidth="205.0">
+                     <children>
+                        <Label fx:id="confirmBookingDepartureTime1" alignment="CENTER" prefHeight="54.0" prefWidth="192.0" textFill="#f0efeb">
+                           <font>
+                              <Font name="Serif Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="hbox1" fx:id="hbox113" layoutX="18.0" layoutY="368.0" prefHeight="67.0" prefWidth="432.0">
+                     <children>
+                        <Label fx:id="selectedSeats1" alignment="CENTER" prefHeight="58.0" prefWidth="415.0" textFill="#f0f3bd">
+                           <font>
+                              <Font name="Serif Bold" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" layoutX="152.0" layoutY="329.0" prefHeight="36.0" prefWidth="178.0" text="Selected Seats" textFill="#283618">
+                     <font>
+                        <Font name="Serif Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="JourneyAnchor" fx:id="JourneyAnchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ddbea9;">
+               <children>
+                  <HBox id="hbox6" prefHeight="67.0" prefWidth="1018.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="254.0" text="Journey Feedback" textFill="#f8edeb">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableid" layoutY="102.0" prefHeight="487.0" prefWidth="1017.0">
+                     <columns>
+                        <TableColumn fx:id="FeedbackUserIdColumn" prefWidth="187.0" text="User ID" />
+                        <TableColumn fx:id="FeedbackFlightIdColumn" prefWidth="205.0" text="Flight ID" />
+                        <TableColumn fx:id="feedbackid" prefWidth="590.0" text="Feedback" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="fedbackInputFlightId" layoutX="35.0" layoutY="601.0" prefHeight="39.0" prefWidth="136.0" />
+                  <TextField fx:id="inputFeedback" layoutX="198.0" layoutY="601.0" prefHeight="39.0" prefWidth="468.0" />
+                  <Button fx:id="submitid" layoutX="721.0" layoutY="601.0" mnemonicParsing="false" onAction="#submitbuttononaction" prefHeight="39.0" prefWidth="100.0" text="Submit" textFill="#3384cc" />
+                  <Label layoutX="67.0" layoutY="649.0" opacity="0.69" prefHeight="27.0" prefWidth="72.0" text="Flight ID">
+                     <font>
+                        <Font name="Eras Light ITC" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="335.0" layoutY="649.0" opacity="0.52" prefHeight="27.0" prefWidth="214.0" text="Write your Feedback here">
+                     <font>
+                        <Font name="Eras Light ITC" size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane fx:id="MyFlightsAnchorpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <AnchorPane fx:id="ConfirmCancelAnchor" prefHeight="682.0" prefWidth="1015.0" style="-fx-background-color: #f8edeb;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="296.0" text="Confirm Cancellation" textFill="#ef476f">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="98.0" prefHeight="41.0" prefWidth="441.0" text="Are you sure you want to cancel your journey?" textFill="#5a189a">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="confirmFlightCancel" layoutX="336.0" layoutY="164.0" onAction="#allCancelAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d62828;" text="Yes" textFill="SNOW">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="confirmFlightCancelBack" layoutX="218.0" layoutY="164.0" onAction="#allCancelAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #4CAF50;" text="No" textFill="SNOW">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="CancelAnchorpane" prefHeight="679.0" prefWidth="982.0" style="-fx-background-color: #f8edeb;">
+                     <children>
+                        <JFXButton fx:id="flightCancelBackBtn" layoutX="274.0" layoutY="491.0" onAction="#allCancelAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #4CAF50;" text="Back" textFill="SNOW">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="flightCancelBtn" layoutX="406.0" layoutY="491.0" onAction="#allCancelAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d62828;" text="Cancel" textFill="SNOW">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="274.0" layoutY="34.0" prefHeight="33.0" prefWidth="296.0" text="Your Journey Details" textFill="#ef476f">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <GridPane fx:id="bookingInfoGrid1" layoutX="274.0" layoutY="125.0" prefHeight="322.0" prefWidth="363.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="175.0" text="Flight ID :" textFill="#2a6f97" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelBookingFlightIdLabel" prefHeight="36.0" prefWidth="175.0" textFill="#2a6f97" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="143.0" text="Departure Date :" textFill="#2a6f97" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelBookingDateLabel" prefHeight="36.0" prefWidth="175.0" textFill="#2a6f97" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="144.0" text="Departure Time :" textFill="#2a6f97" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelBookingDepartureTimeLabel" prefHeight="36.0" prefWidth="205.0" textFill="#2a6f97" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="175.0" text="Name :" textFill="#2a6f97">
+                                 <font>
+                                    <Font name="Serif Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelBookingName" prefHeight="36.0" prefWidth="175.0" textFill="#2a6f97" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Serif Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="141.0" text="Departure From :" textFill="#2a6f97" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelBookingDepartureFrom" prefHeight="36.0" prefWidth="201.0" textFill="#2a6f97" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="178.0" text="Departure To:" textFill="#2a6f97" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelBookingDepartureTo" prefHeight="36.0" prefWidth="205.0" textFill="#2a6f97" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="36.0" prefWidth="178.0" text="Selected Seats:" textFill="#2a6f97" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Serif Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="cancelSelectedSeats" prefHeight="36.0" prefWidth="175.0" textFill="#2a6f97" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Serif Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="165.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="198.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="tabAnchor" layoutY="1.0" style="-fx-background-color: #f8edeb;">
+                     <children>
+                        <TabPane layoutY="-6.0" prefHeight="684.0" prefWidth="1014.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Booked Flights">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="BookedTable" prefHeight="639.0" prefWidth="1015.0">
+                                            <columns>
+                                              <TableColumn fx:id="bookedFlightID" prefWidth="98.0" text="FlightID" />
+                                              <TableColumn fx:id="bookedSource" prefWidth="155.0" text="Source" />
+                                                <TableColumn fx:id="bookedDestination" prefWidth="170.0" text="Destination" />
+                                                <TableColumn fx:id="bookedDate" prefWidth="178.0" text="Date And Time" />
+                                                <TableColumn fx:id="bookedSeatsbookingTable" prefWidth="204.0" text="Selected Seats" />
+                                                <TableColumn fx:id="bookedNoOfSeats" prefWidth="209.0" text="No. Of Seats" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Previous Flights">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="flightHistoryTable" layoutY="68.0" prefHeight="575.0" prefWidth="1011.0">
+                                            <columns>
+                                              <TableColumn fx:id="historyFlightID" prefWidth="107.0" text="FlightID" />
+                                              <TableColumn fx:id="historySource" prefWidth="175.0" text="Source" />
+                                                <TableColumn fx:id="historyDestination" prefWidth="193.0" text="Destination" />
+                                                <TableColumn fx:id="historyDateTime" prefWidth="198.0" text="Date And Time" />
+                                                <TableColumn fx:id="historyBookedSeats" prefWidth="161.0" text="Selected Seats" />
+                                                <TableColumn fx:id="historyNoOfSeats" prefWidth="171.0" text="No. Of Seats" />
+                                            </columns>
+                                          </TableView>
+                                          <HBox id="hbox8" layoutX="7.0" layoutY="6.0" prefHeight="54.0" prefWidth="201.0">
+                                             <children>
+                                                <JFXTextField fx:id="historySearch" onKeyReleased="#filterHistoryAction" prefHeight="41.0" prefWidth="188.0" promptText="Search" style="-fx-background-color: #f8edeb;">
+                                                   <font>
+                                                      <Font name="System Bold" size="19.0" />
+                                                   </font></JFXTextField>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="BookTicketAnchor" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8edeb;">
+               <children>
+                  <JFXButton id="bookTicketShowBtn" fx:id="bookTicketShowBtn" layoutX="371.0" layoutY="437.0" onAction="#bookTicketShowBtnAction" prefHeight="55.0" prefWidth="257.0" style="-fx-background-color: #6d597a;" text="Show Flights" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox id="openingHbox" layoutX="212.0" layoutY="178.0" prefHeight="57.0" prefWidth="266.0">
+                     <children>
+                        <JFXComboBox fx:id="bookTicketFrom" focusColor="#4b62a4" prefHeight="38.0" prefWidth="248.0" promptText="From" style="-fx-background-color: transparent;" unFocusColor="BLACK" />
+                     </children>
+                  </HBox>
+                  <HBox id="openingHbox" layoutX="519.0" layoutY="178.0" prefHeight="58.0" prefWidth="263.0">
+                     <children>
+                        <JFXComboBox fx:id="bookTicketTo" prefHeight="37.0" prefWidth="241.0" promptText="To" />
+                     </children>
+                  </HBox>
+                  <HBox id="openingHbox" layoutX="215.0" layoutY="299.0" prefHeight="63.0" prefWidth="263.0">
+                     <children>
+                        <DatePicker fx:id="bookTicketDepDate" prefHeight="31.0" prefWidth="241.0" promptText="Departure Date" />
+                     </children>
+                  </HBox>
+                  <HBox id="openingHbox" layoutX="520.0" layoutY="300.0" prefHeight="62.0" prefWidth="261.0">
+                     <children>
+                        <JFXComboBox fx:id="bookTicketClassType" prefHeight="48.0" prefWidth="239.0" promptText="Class Type" />
+                     </children>
+                  </HBox>
+                  <HBox id="hbox6" layoutX="-1.0" layoutY="-2.0" prefHeight="67.0" prefWidth="1018.0" />
+                  <Label layoutX="372.0" layoutY="14.0" prefHeight="40.0" prefWidth="254.0" text="Search Your Flights" textFill="#f8edeb">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
