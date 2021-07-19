@@ -1,8 +1,12 @@
-# Airways-Management-System
-'Airways Management System' is a group project of CSE-3104 (Database Lab) Course, 3rd Year 1st Semester, CSE, AUST.
+************************************ Welcome ************************************
 
-Porgramming Languages Used: Java
+=>Project Name		: Airways Management System
+=>Software Requirements	: Neatbeans IDE 8.2, MS SQL Server 2014 Management Studio.
+=>Operating System	: Windows 8/8.1/10
 
-Query Languages Used: MySQL
 
-Tools Used: Netbeans 8.2, MSSQL 2014
+To run the project file, copy the whole project file and past it on "C:\Users\Saqlain\Documents\NetBeansProjects" folder. 
+Then load the file form Netbeans IDE 8.2 and start the application.
+
+
+**********************************************************************************
